@@ -4,7 +4,12 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return render_template("index.html", titulo="Demo Git + Flask", mensaje="Hola desde main")
+    return render_template(
+        "index.html",
+        titulo="Demo Git + Flask",
+        mensaje="Hola desde feature/banner",
+        subtitulo="Esta versión vive en otra rama"
+    )
 
 if __name__ == "__main__":
     app.run(debug=True, port=5050)
